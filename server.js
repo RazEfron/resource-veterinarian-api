@@ -28,7 +28,9 @@ app.use((req, _res, next) => {
 });
 
 // Mount routes.
-app.use("/api", router);
+// app.use("/api", router);
+app.use(`/.netlify/functions/api`, router);
+
 
 // Error handler.
 app.use(
